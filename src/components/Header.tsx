@@ -1,19 +1,20 @@
 import { useState } from 'react'
 import logo from '../assets/images/svg/logo.svg'
+import Button from './Button'
 
 const navLinks = [
   { label: 'Home', href: '#home' },
-  { label: 'Features', href: '#' },
+  { label: 'Features', href: '#features' },
   { label: 'Community', href: '#community' },
-  { label: 'Blog', href: '#' },
-  { label: 'Pricing', href: '#' },
+  { label: 'Blog', href: '#blog' },
+  { label: 'Pricing', href: '#pricing' },
 ]
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false)
 
   return (
-    <header className="sticky top-0 z-50 bg-white">
+    <header className="sticky top-0 z-50 bg-white font-sans">
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4 sm:px-6 md:h-20 lg:px-8">
 
         <a href="#" className="flex items-center gap-2 text-lg text-heading no-underline sm:text-xl">
@@ -30,10 +31,10 @@ export default function Header() {
               </a>
             ))}
           </nav>
-          <button className="inline-flex cursor-pointer items-center gap-2 rounded-sm border-0 bg-primary px-6 py-3 text-sm font-bold text-white">
+          <Button>
             Register Now
             <i className="fa-solid fa-arrow-right" aria-hidden="true"></i>
-          </button>
+          </Button>
         </div>
 
         <button
@@ -59,10 +60,10 @@ export default function Header() {
               </a>
             ))}
           </nav>
-          <button className="inline-flex cursor-pointer items-center gap-2 rounded-sm border-0 bg-primary px-6 py-3 text-sm font-bold text-white mt-3 w-full justify-center">
+          <Button fullWidth className="mt-3">
             Register Now
             <i className="fa-solid fa-arrow-right" aria-hidden="true"></i>
-          </button>
+          </Button>
         </div>
       )}
     </header>
