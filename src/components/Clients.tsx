@@ -16,7 +16,7 @@ export default function Clients() {
         <div className="mt-10 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:flex lg:justify-between items-center gap-8 lg:gap-0">
           {logos.map((src, i) => (
             <a key={i} href="#">
-              <img src={src} alt="Client logo" className="h-12 w-auto" />
+              <img src={src} alt="Client logo" title='Client logo' className="h-12 w-auto" />
             </a>
           ))}
         </div>

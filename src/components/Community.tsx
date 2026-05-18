@@ -13,7 +13,7 @@ export default function Community() {
     <section className="bg-white">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 py-10 sm:py-16 text-left sm:text-center">
         <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-heading leading-tight">
-          Manage your entire community<br />in a single system
+          Manage your entire community<br className="hidden sm:block" />in a single system
         </h2>
         <p className="mt-4 text-text">Who is Nextcent suitable for?</p>
 
