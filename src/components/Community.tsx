@@ -19,7 +19,7 @@ export default function Community() {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mt-5">
           {cards.map(({ img, alt, title }) => (
-            <div key={alt} className="rounded-2xl border-b border-border-color p-6 sm:p-8">
+            <div key={alt} className="rounded-xl border-b border-gray-200 shadow-[0_8px_5px_-6px_rgba(0,0,0,0.1)] p-6 sm:p-8">
               <div className="flex justify-start sm:justify-center mb-6">
                 <img src={img} alt={alt} className="w-16 h-16 sm:w-20 sm:h-20" />
               </div>

@@ -8,6 +8,7 @@ import Testimonial from './components/Testimonial'
 import DesignSection from './components/DesignSection'
 import Footer from './components/footer'
 import Blog from './components/Blog'
+import Cta from './components/Cta'
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
         <DesignSection />
         <Testimonial />
         <Blog />
+        <Cta />
       </main>
       <Footer />
     </>

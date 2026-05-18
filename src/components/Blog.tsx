@@ -17,15 +17,15 @@ export default function Blog() {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <article className="group relative flex flex-col cursor-pointer">
-            <div className="overflow-hidden rounded-xl h-64">
+            <div className="overflow-hidden rounded-md h-64">
               <img
                 src={streamlined}
                 alt="Creating Streamlined Safeguarding Processes with OneRen"
                 title='Creating Streamlined Safeguarding Processes with OneRen'
                 className="w-full h-full object-cover" />
             </div>
-            <div className="relative mx-4 -mt-20 bg-surface rounded-xl shadow-md p-6 text-center flex flex-col gap-4 flex-1 justify-between">
-              <h3 className="text-xl font-semibold text-text">
+            <div className="relative mx-4 -mt-20 bg-surface rounded-md shadow-lg p-6 text-center flex flex-col gap-4 flex-1 justify-between">
+              <h3 className="text-lg font-semibold text-text">
                 Creating Streamlined Safeguarding Processes with OneRen
               </h3>
               <a href="#" className="inline-flex items-center justify-center gap-1 text-primary font-semibold">
@@ -36,15 +36,15 @@ export default function Blog() {
           </article>
 
           <article className="group relative flex flex-col cursor-pointer">
-            <div className="overflow-hidden rounded-xl h-64">
+            <div className="overflow-hidden rounded-md h-64">
               <img
                 src={safeguarding}
                 alt="What are your safeguarding responsibilities and how can you manage them?"
                 title='What are your safeguarding responsibilities and how can you manage them?'
                 className="w-full h-full object-cover" />
             </div>
-            <div className="relative mx-4 -mt-20 bg-surface rounded-xl shadow-md p-6 text-center flex flex-col gap-4 flex-1 justify-between">
-              <h3 className="text-xl font-semibold text-text">
+            <div className="relative mx-4 -mt-20 bg-surface rounded-md shadow-lg p-6 text-center flex flex-col gap-4 flex-1 justify-between">
+              <h3 className="text-lg font-semibold text-text">
                 What are your safeguarding responsibilities and how can you manage them?
               </h3>
               <a href="#" className="inline-flex items-center justify-center gap-1 text-primary font-semibold">
@@ -55,16 +55,16 @@ export default function Blog() {
           </article>
 
           <article className="group relative flex flex-col cursor-pointer">
-            <div className="overflow-hidden rounded-xl h-64">
+            <div className="overflow-hidden rounded-md h-64">
               <img
                 src={revamping}
                 alt="Revamping the Membership Model with Triathlon Australia"
                 title='Revamping the Membership Model with Triathlon Australia'
                 className="w-full h-full object-cover" />
             </div>
-            <div className="relative mx-4 -mt-20 bg-surface rounded-xl shadow-md p-6 text-center flex flex-col gap-4 flex-1 justify-between">
-              <h3 className="text-xl font-semibold text-text">
-                Revamping the Membership Model with Triathlon Australia
+            <div className="relative mx-4 -mt-20 bg-surface rounded-md shadow-lg p-6 text-center flex flex-col gap-4 flex-1 justify-between">
+              <h3 className="text-lg font-semibold text-text">
+                Revamping the Membership Model with Triathlon <br></br>Australia
               </h3>
               <a href="#" className="inline-flex items-center justify-center gap-1 text-primary font-semibold">
                 Read more

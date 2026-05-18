@@ -14,19 +14,21 @@ export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false)
 
   return (
-    <header className="sticky top-0 z-50 bg-white font-sans">
-      <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4 sm:px-6 md:h-20 lg:px-8">
-
-        <a href="#" className="flex items-center gap-2 text-lg text-heading no-underline sm:text-xl">
+    <header className="sticky top-0 z-50 bg-white shadow-sm">
+      <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-4 sm:px-6 md:px-8">
+        <a href="#" className="flex items-center gap-2 text-lg font-bold text-heading no-underline sm:text-xl">
           <img src={logo} alt="Nexcent logo" className="h-8 w-8" />
           Nexcent
         </a>
 
         <div className="hidden md:flex items-center gap-6">
-          <nav className="flex items-center gap-6 lg:gap-8">
+          <nav className="flex flex-wrap items-center gap-4 lg:gap-6">
             {navLinks.map(({ label, href }) => (
-              <a key={label} href={href}
-                className="text-sm font-bold text-heading no-underline transition-colors duration-300 hover:text-primary">
+              <a
+                key={label}
+                href={href}
+                className="text-sm font-bold text-heading no-underline transition-colors duration-200 hover:text-primary"
+              >
                 {label}
               </a>
             ))}
@@ -38,7 +40,7 @@ export default function Header() {
         </div>
 
         <button
-          className="md:hidden inline-flex h-10 w-10 cursor-pointer items-center justify-center border border-border-soft bg-white text-heading"
+          className="md:hidden inline-flex h-10 w-10 items-center justify-center rounded-sm border border-border-soft bg-white text-heading"
           type="button"
           aria-controls="mobileMenu"
           aria-expanded={menuOpen}
@@ -50,17 +52,20 @@ export default function Header() {
       </div>
 
       {menuOpen && (
-        <div id="mobileMenu" className="absolute top-full left-0 right-0 border-t border-border-soft bg-surface px-4 pb-5 pt-2 shadow-sm sm:px-6 md:hidden">
-          <nav className="flex flex-col">
-            {navLinks.map(({ label, href }, i) => (
-              <a key={label} href={href}
+        <div id="mobileMenu" className="md:hidden border-t border-border-soft bg-surface px-4 pb-4 pt-3">
+          <nav className="flex flex-col items-end gap-2">
+            {navLinks.map(({ label, href }) => (
+              <a
+                key={label}
+                href={href}
                 onClick={() => setMenuOpen(false)}
-                className={`text-sm font-bold text-heading no-underline transition-colors duration-300 hover:text-primary py-3${i < navLinks.length - 1 ? ' border-b border-border-soft' : ''}`}>
+                className="rounded-sm px-2 py-2 text-right text-sm font-bold text-heading no-underline transition-colors duration-200 hover:bg-white hover:text-primary"
+              >
                 {label}
               </a>
             ))}
           </nav>
-          <Button fullWidth className="mt-3">
+          <Button fullWidth className="mt-4">
             Register Now
             <i className="fa-solid fa-arrow-right" aria-hidden="true"></i>
           </Button>

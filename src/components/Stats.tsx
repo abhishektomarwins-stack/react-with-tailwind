@@ -6,7 +6,7 @@ import paymentsIcon from '../assets/images/svg/payments.svg';
 const Stats = () => {
   return (
     <section className="bg-surface">
-      <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-10 lg:py-15 flex flex-col lg:flex-row items-center gap-10 lg:gap-16">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-10 lg:py-15 flex flex-col lg:flex-row items-start sm:items-center gap-10 lg:gap-16">
         <div className="flex-1 text-left sm:text-center lg:text-left">
           <h2 className="text-3xl sm:text-4xl text-heading leading-tight font-sans">
             Helping a local

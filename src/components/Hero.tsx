@@ -20,7 +20,7 @@ export default function Hero() {
           </div>
         </div>
 
-        <div className="w-full max-w-md">
+        <div className="hidden lg:block w-full max-w-md">
           <img src={banner} alt="Dashboard illustration" title='Dashboard illustration' className="w-full object-contain" />
         </div>
 
