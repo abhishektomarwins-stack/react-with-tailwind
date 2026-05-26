@@ -1,13 +1,13 @@
 import { useState } from 'react'
+import { Link, NavLink } from 'react-router-dom'
 import logo from '../assets/images/svg/logo.svg'
-import Button from './Button'
 
 const navLinks = [
-  { label: 'Home', href: '#home' },
-  { label: 'Features', href: '#features' },
-  { label: 'Community', href: '#community' },
-  { label: 'Blog', href: '#blog' },
-  { label: 'Pricing', href: '#pricing' },
+  { label: 'Home', to: '/' },
+  { label: 'Features', to: '/features' },
+  { label: 'Community', to: '/community' },
+  { label: 'Blog', to: '/blog' },
+  { label: 'Pricing', to: '/pricing' },
 ]
 
 export default function Header() {
@@ -16,27 +16,33 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-50 bg-white shadow-sm">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-4 sm:px-6 md:px-8">
-        <a href="#" className="flex items-center gap-2 text-lg font-bold text-heading no-underline sm:text-xl">
+        <Link to="/" className="flex items-center gap-2 text-lg font-bold text-heading no-underline sm:text-xl">
           <img src={logo} alt="Nexcent logo" className="h-8 w-8" />
           Nexcent
-        </a>
+        </Link>
 
         <div className="hidden md:flex items-center gap-6">
-          <nav className="flex flex-wrap items-center gap-4 lg:gap-6">
-            {navLinks.map(({ label, href }) => (
-              <a
+          <nav className="flex flex-wrap items-center gap-4 lg:gap-8">
+            {navLinks.map(({ label, to }) => (
+              <NavLink
                 key={label}
-                href={href}
-                className="text-sm font-bold text-heading no-underline transition-colors duration-200 hover:text-primary"
+                to={to}
+                end={to === '/'}
+                className={({ isActive }) =>
+                  `text-sm font-bold no-underline transition-colors duration-200 hover:text-primary ${isActive ? 'text-primary' : 'text-heading'}`
+                }
               >
                 {label}
-              </a>
+              </NavLink>
             ))}
           </nav>
-          <Button>
+          <Link
+            to="/pricing"
+            className="inline-flex cursor-pointer items-center gap-2 rounded-sm border-0 bg-primary px-6 py-3 text-sm font-bold text-white"
+          >
             Register Now
             <i className="fa-solid fa-arrow-right" aria-hidden="true"></i>
-          </Button>
+          </Link>
         </div>
 
         <button
@@ -54,21 +60,28 @@ export default function Header() {
       {menuOpen && (
         <div id="mobileMenu" className="md:hidden border-t border-border-soft bg-surface px-4 pb-4 pt-3">
           <nav className="flex flex-col items-end gap-2">
-            {navLinks.map(({ label, href }) => (
-              <a
+            {navLinks.map(({ label, to }) => (
+              <NavLink
                 key={label}
-                href={href}
+                to={to}
+                end={to === '/'}
                 onClick={() => setMenuOpen(false)}
-                className="rounded-sm px-2 py-2 text-right text-sm font-bold text-heading no-underline transition-colors duration-200 hover:bg-white hover:text-primary"
+                className={({ isActive }) =>
+                  `rounded-sm px-2 py-2 text-right text-sm font-bold no-underline transition-colors duration-200 hover:bg-white hover:text-primary ${isActive ? 'text-primary' : 'text-heading'}`
+                }
               >
                 {label}
-              </a>
+              </NavLink>
             ))}
           </nav>
-          <Button fullWidth className="mt-4">
+          <Link
+            to="/pricing"
+            onClick={() => setMenuOpen(false)}
+            className="mt-4 inline-flex w-full cursor-pointer items-center justify-center gap-2 rounded-sm border-0 bg-primary px-6 py-3 text-sm font-bold text-white"
+          >
             Register Now
             <i className="fa-solid fa-arrow-right" aria-hidden="true"></i>
-          </Button>
+          </Link>
         </div>
       )}
     </header>

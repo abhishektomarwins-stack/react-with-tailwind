@@ -15,11 +15,11 @@ const Testimonial = () => {
             <img
               src={maecenasImg}
               alt="Client showcase"
-              className="w-72 h-72 object-cover rounded-md"
+              className="w-72 h-72"
             />
           </div>
           <div className="max-w-full lg:max-w-3xl">
-            <p className="text-[15px] text-text mb-2">
+            <p className="text-base text-text mb-2">
               Maecenas dignissim justo eget nulla rutrum molestie.
               Maecenas lobortis sem dui, vel rutrum risus tincidunt
               ullamcorper. Proin eu enim metus. Vivamus sed libero

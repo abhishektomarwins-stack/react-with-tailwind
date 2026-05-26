@@ -1,8 +1,21 @@
+import { Link } from 'react-router-dom';
 import logo from '../assets/images/svg/logo.svg';
 
 const socials = ["fa-instagram", "fa-dribbble", "fa-twitter", "fa-youtube"];
-const company = ["About us", "Blog", "Contact us", "Pricing", "Testimonials"];
-const support = ["Help center", "Terms of service", "Legal", "Privacy policy", "Status"];
+const company = [
+  { label: "About us", to: "/community" },
+  { label: "Blog", to: "/blog" },
+  { label: "Contact us", to: "/community" },
+  { label: "Pricing", to: "/pricing" },
+  { label: "Testimonials", to: "/community" },
+];
+const support = [
+  { label: "Help center", to: "/features" },
+  { label: "Terms of service", to: "/features" },
+  { label: "Legal", to: "/features" },
+  { label: "Privacy policy", to: "/features" },
+  { label: "Status", to: "/features" },
+];
 
 export default function Footer() {
   return (
@@ -10,10 +23,10 @@ export default function Footer() {
       <div className="mx-auto max-w-6xl px-4 sm:px-6 py-14 lg:py-16">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-8">
           <div className="flex flex-col items-center sm:items-start gap-5 sm:col-span-2 lg:col-span-1">
-            <a href="#" className="flex items-center gap-2 text-2xl font-bold text-white">
+            <Link to="/" className="flex items-center gap-2 text-2xl font-bold text-white">
               <img src={logo} alt="Nexcent logo" className="h-8 w-8" />
               Nexcent
-            </a>
+            </Link>
             <p className="text-sm text-gray-300 leading-relaxed text-center sm:text-left">
               Copyright &copy; 2020 Landify UI Kit.<br />All rights reserved
             </p>
@@ -30,7 +43,11 @@ export default function Footer() {
               <h3 className="text-lg font-semibold text-white">{title}</h3>
               <ul className="flex flex-col items-center sm:items-start gap-3">
                 {links.map((item) => (
-                  <li key={item}><a href="#" className="text-sm text-gray-300 hover:text-white transition-colors">{item}</a></li>
+                  <li key={item.label}>
+                    <Link to={item.to} className="text-sm text-gray-300 hover:text-white transition-colors">
+                      {item.label}
+                    </Link>
+                  </li>
                 ))}
               </ul>
             </div>

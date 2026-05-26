@@ -1,32 +1,29 @@
-import Header from './components/Header'
-import Hero from './components/Hero'
-import Clients from './components/Clients'
-import Community from './components/Community'
-import Spending from './components/Spending'
-import Stats from './components/Stats'
-import Testimonial from './components/Testimonial'
-import DesignSection from './components/DesignSection'
-import Footer from './components/footer'
-import Blog from './components/Blog'
-import Cta from './components/Cta'
+import { Route, Routes } from 'react-router-dom'
+import Header from './common/Header'
+import Footer from './common/footer'
+import { BlogPage } from './pages/blog'
+import { CommunityPage } from './pages/community'
+import { Features } from './pages/features'
+import { Home } from './pages/home'
+import { NotFound } from './pages/not-found'
+import { Pricing } from './pages/pricing'
 
 function App() {
   return (
-    <>
+    <div className="min-h-screen bg-white font-sans text-heading">
       <Header />
       <main>
-        <Hero />
-        <Clients />
-        <Community />
-        <Spending />
-        <Stats />
-        <DesignSection />
-        <Testimonial />
-        <Blog />
-        <Cta />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/features" element={<Features />} />
+          <Route path="/community" element={<CommunityPage />} />
+          <Route path="/blog" element={<BlogPage />} />
+          <Route path="/pricing" element={<Pricing />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
       </main>
       <Footer />
-    </>
+    </div>
   )
 }
 
