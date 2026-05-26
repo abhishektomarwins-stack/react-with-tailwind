@@ -10,7 +10,7 @@ import { Pricing } from './pages/pricing'
 
 function App() {
   return (
-    <div className="min-h-screen bg-white font-sans text-heading">
+    <div className="min-h-screen font-sans text-heading">
       <Header />
       <main>
         <Routes>

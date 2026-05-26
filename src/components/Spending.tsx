@@ -14,7 +14,7 @@ export default function Spending() {
         </div>
 
         <div className="w-full text-left sm:text-center lg:text-left">
-          <h2 className="text-3xl sm:text-4xl text-heading font-semibold">
+          <h2 className="text-3xl sm:text-4xl font-semibold">
             The unseen of spending three years at Pixelgrade
           </h2>
           <p className="text-text mt-5">

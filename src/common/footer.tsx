@@ -24,7 +24,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-8">
           <div className="flex flex-col items-center sm:items-start gap-5 sm:col-span-2 lg:col-span-1">
             <Link to="/" className="flex items-center gap-2 text-2xl font-bold text-white">
-              <img src={logo} alt="Nexcent logo" className="h-8 w-8" />
+              <img src={logo} alt="Nexcent logo" className="size-8" />
               Nexcent
             </Link>
             <p className="text-sm text-gray-300 leading-relaxed text-center sm:text-left">
@@ -32,7 +32,7 @@ export default function Footer() {
             </p>
             <div className="flex gap-3">
               {socials.map((icon) => (
-                <a key={icon} href="#" className="flex h-9 w-9 items-center justify-center rounded-full bg-white/10 text-gray-300 hover:bg-white/20 transition-colors">
+                <a key={icon} href="#" className="flex size-10 items-center justify-center rounded-full bg-white/10 text-gray-300 hover:bg-white/20 transition-colors">
                   <i className={`fab ${icon}`} />
                 </a>
               ))}

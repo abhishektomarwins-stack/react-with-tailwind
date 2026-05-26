@@ -17,7 +17,7 @@ export default function Header() {
     <header className="sticky top-0 z-50 bg-white shadow-sm">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-4 sm:px-6 md:px-8">
         <Link to="/" className="flex items-center gap-2 text-lg font-bold text-heading no-underline sm:text-xl">
-          <img src={logo} alt="Nexcent logo" className="h-8 w-8" />
+          <img src={logo} alt="Nexcent logo" title="Nexcent logo" className="size-12" />
           Nexcent
         </Link>
 
@@ -29,7 +29,7 @@ export default function Header() {
                 to={to}
                 end={to === '/'}
                 className={({ isActive }) =>
-                  `text-sm font-bold no-underline transition-colors duration-200 hover:text-primary ${isActive ? 'text-primary' : 'text-heading'}`
+                  `text-base font-bold no-underline transition-colors duration-200 hover:text-primary ${isActive ? 'text-primary' : 'text-heading'}`
                 }
               >
                 {label}
@@ -38,7 +38,7 @@ export default function Header() {
           </nav>
           <Link
             to="/pricing"
-            className="inline-flex cursor-pointer items-center gap-2 rounded-sm border-0 bg-primary px-6 py-3 text-sm font-bold text-white"
+            className="inline-flex cursor-pointer items-center gap-2 rounded-sm border-0 bg-primary hover:bg-primary/80 px-6 py-3 text-sm font-bold text-white"
           >
             Register Now
             <i className="fa-solid fa-arrow-right" aria-hidden="true"></i>

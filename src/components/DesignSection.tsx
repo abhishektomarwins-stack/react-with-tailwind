@@ -14,7 +14,7 @@ const DesignSection = () => {
         </div>
 
         <div className="w-full text-left sm:text-center lg:text-left">
-          <h2 className="text-3xl sm:text-4xl text-heading">
+          <h2 className="text-3xl sm:text-4xl">
             How to design your site footer like we did
           </h2>
           <p className="text-text mt-5">
@@ -31,7 +31,7 @@ const DesignSection = () => {
           <div className="mt-8 flex justify-start sm:justify-center lg:justify-start">
             <a
               href="#"
-              className="inline-flex cursor-pointer items-center gap-2 rounded-sm border-0 bg-primary px-8 py-4 text-sm font-bold text-white"
+              className="inline-flex cursor-pointer items-center gap-2 rounded-sm border-0 bg-primary px-8 py-4 text-sm font-bold text-white hover:opacity-90 transition-opacity"
             >
               Learn More
             </a>

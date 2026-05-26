@@ -1,10 +1,10 @@
 import maecenasImg from '../assets/images/maecenas.webp';
-import logo1 from '../assets/images/svg/logo-1.svg';
-import logo2 from '../assets/images/svg/logo-2.svg';
-import logo3 from '../assets/images/svg/logo-3.svg';
-import logo4 from '../assets/images/svg/logo-4.svg';
-import logo5 from '../assets/images/svg/logo-5.svg';
-import logo6 from '../assets/images/svg/logo-6.svg';
+import logo1 from '../assets/images/svg/abstract-geometric.svg';
+import logo2 from '../assets/images/svg/abstract-eye.svg';
+import logo3 from '../assets/images/svg/monogram.svg';
+import logo4 from '../assets/images/svg/wordmark.svg';
+import logo5 from '../assets/images/svg/fingerprint.svg';
+import logo6 from '../assets/images/svg/infinity-link.svg';
 
 const Testimonial = () => {
   return (
@@ -42,12 +42,12 @@ const Testimonial = () => {
               </p>
             </div>
             <div className="flex flex-wrap items-center gap-6 sm:gap-8">
-              <img src={logo1} alt="Logo 1" className="h-8 w-auto" />
-              <img src={logo2} alt="Logo 2" className="h-8 w-auto" />
-              <img src={logo3} alt="Logo 3" className="h-8 w-auto" />
-              <img src={logo4} alt="Logo 4" className="h-8 w-auto" />
-              <img src={logo5} alt="Logo 5" className="h-8 w-auto" />
-              <img src={logo6} alt="Logo 6" className="h-8 w-auto" />
+              <img src={logo1} alt="Abstract Geometric" title='' className="h-8 w-auto" />
+              <img src={logo2} alt="Abstract Eye" title='Abstract Eye' className="h-8 w-auto" />
+              <img src={logo3} alt="Monogram" title='Monogram' className="h-8 w-auto" />
+              <img src={logo4} alt="Wordmark" title='Wordmark' className="h-8 w-auto" />
+              <img src={logo5} alt="Fingerprint" title='Fingerprint' className="h-8 w-auto" />
+              <img src={logo6} alt="Infinity Link" title='Infinity Link' className="h-8 w-auto" />
               <a
                 href="#"
                 className="inline-flex items-center gap-3 text-primary font-semibold whitespace-nowrap mt-2 sm:mt-0"
